@@ -17,7 +17,7 @@
 <body>
 
 <div id='container'>
-	<h1>Philadelphia Zoning</h1>
+	<h1>Lower North Planning District Zoning</h1>
 	<p>Data from OpenDataPhilly.org</h2>
 	<div id='map'></div>
 	<p id='footnote'>Example created for the September 13, 2017 meeting of DVRPC IREG.</p>
@@ -32,6 +32,22 @@ var map = new mapboxgl.Map({
 });
 
 map.addControl(new mapboxgl.NavigationControl());
+
+// Focus on the Lower North Planning District
+map.on('load', function() {
+
+	map.setFilter('building', ['==', 'district', 'Lower North']);
+	map.setFilter('zoning', ['==', 'district', 'Lower North']);
+	map.setFilter('district', ['==', 'district', 'Lower North']);
+
+	map.jumpTo({
+		center: [-75.1614, 39.979],
+		zoom: 13,
+		bearing: 0,
+		pitch: 53
+  });
+
+});
 
 </script>
 
