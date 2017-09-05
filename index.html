@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { background: #292d39; margin:0; padding: 10px; color: #fff; font-family: 'Open Sans', 'Arial', sans-serif; }
+				#container { display: flex; flex-direction: column; align-items: center; }
+        #map { height: 400px; width: 600px; border: #4ba6dd solid 4px; }
+				#footnote { font-style: italic; font-weight: lighter; font-size: 14px; }
+				#azavea { transform: scale(0.35); }
+    </style>
+</head>
+<body>
+
+<div id='container'>
+	<h1>Philadelphia Zoning</h1>
+	<p>Data from OpenDataPhilly.org</h2>
+	<div id='map'></div>
+	<p id='footnote'>Example created for the September 13, 2017 meeting of DVRPC IREG.</p>
+	<img id='azavea' src='https://www.azavea.com/wp-content/uploads/2016/06/azavea-logo-invert-2x.png'/>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25kZW5uaXMiLCJhIjoiY2o3N295dWNoMWUyOTJxbXRqZWU2MGZkbiJ9.LScPB7xy92fpu2RJ7IDOAQ';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/aarondennis/cj77wthr05h712sqru1io8sla'
+});
+
+map.addControl(new mapboxgl.NavigationControl());
+
+</script>
+
+</body>
+</html>
