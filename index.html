@@ -17,8 +17,8 @@
 <body>
 
 <div id='container'>
-	<h1>Lower North Planning District Zoning</h1>
-	<p>Data from OpenDataPhilly.org</h2>
+	<h1>Upper Far Northeast Planning District Zoning</h1>
+	<p>Data from <a href=https://opendataphilly.org>OpenDataPhilly.org</a></h2>
 	<div id='map'></div>
 	<p id='footnote'>Example created for the September 13, 2017 meeting of DVRPC IREG.</p>
 	<img id='azavea' src='https://www.azavea.com/wp-content/uploads/2016/06/azavea-logo-invert-2x.png'/>
@@ -36,13 +36,13 @@ map.addControl(new mapboxgl.NavigationControl());
 // Focus on the Lower North Planning District
 map.on('load', function() {
 
-	map.setFilter('building', ['==', 'district', 'Lower North']);
-	map.setFilter('zoning', ['==', 'district', 'Lower North']);
-	map.setFilter('district', ['==', 'district', 'Lower North']);
+	map.setFilter('building', ['==', 'district', 'Upper Far Northeast']);
+	map.setFilter('zoning', ['==', 'district', 'Upper Far Northeast']);
+	map.setFilter('district', ['==', 'district', 'Upper Far Northeast']);
 
 	map.jumpTo({
-		center: [-75.1614, 39.979],
-		zoom: 13,
+		center: [-75.0276, 40.1019],
+		zoom: 12,
 		bearing: 0,
 		pitch: 53
   });
